@@ -142,7 +142,7 @@ fun AddProductScreen(navController: NavController, viewModel: ProductViewModel) 
                     val finalImage = if (isUrlSelected) imageUrl else selectedImageUri?.toString().orEmpty()
 
                     val newProduct = Product(
-                        id = 0,
+                        id = "0",
                         title = title,
                         price = price.toDoubleOrNull() ?: 0.0,
                         description = description,
@@ -155,8 +155,9 @@ fun AddProductScreen(navController: NavController, viewModel: ProductViewModel) 
                         images = listOf(finalImage)
                     )
 
-                    viewModel.postProduct(newProduct) {
-                        navController.popBackStack()
+                    // Call the method to add the product to Firebase
+                    viewModel.addProductToFirebase(newProduct, selectedImageUri) {
+                        navController.popBackStack()  // Navigate back after success
                     }
                 },
                 modifier = Modifier.fillMaxWidth().height(56.dp).padding(vertical = 12.dp),
@@ -164,6 +165,8 @@ fun AddProductScreen(navController: NavController, viewModel: ProductViewModel) 
             ) {
                 Text("Add Product", color = Color.White)
             }
+
+        }
         }
     }
-}
+

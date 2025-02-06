@@ -2,13 +2,21 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
 import androidx.navigation.compose.*
 import androidx.navigation.navArgument
+import sree.ddukk.productapp.domain.ProductRepository
 import sree.ddukk.productapp.ui.screens.AddProductScreen
 import sree.ddukk.productapp.ui.screens.DetailScreen
 import sree.ddukk.productapp.ui.screens.ProductScreen
 import sree.ddukk.productapp.ui.viewmodel.ProductViewModel
 
 @Composable
-fun AppNavigation(viewModel: ProductViewModel = ProductViewModel()) {
+fun AppNavigation() {
+    // Create an instance of ProductRepository
+    val productRepository = ProductRepository()
+
+    // Create the ProductViewModel and pass the repository to it
+    val viewModel = ProductViewModel(productRepository = productRepository)
+
+    // Set up the navController
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = "productList") {

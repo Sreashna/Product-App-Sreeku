@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("kotlin-kapt")
+    id("com.google.gms.google-services" ) version "4.4.2" apply true
+
 
 
 
@@ -66,6 +68,12 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     kapt("androidx.room:room-compiler:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
+
+    implementation (libs.firebase.firestore.ktx)
+    implementation (libs.firebase.storage.ktx)
+
+    // Google Services plugin
+    implementation (libs.google.services)
 
 
 

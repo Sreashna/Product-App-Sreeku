@@ -27,7 +27,8 @@ import sree.ddukk.productapp.ui.viewmodel.ProductViewModel
 @Composable
 fun DetailScreen(productId: Int, viewModel: ProductViewModel) {
     val products by viewModel.products.collectAsState()
-    val product = products.find { it.id == productId }
+    val product = products.find { it.id == productId.toString() }
+
 
     product?.let {
         Scaffold(

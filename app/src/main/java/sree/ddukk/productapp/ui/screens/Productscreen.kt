@@ -24,14 +24,14 @@ fun ProductScreen(navController: NavController, viewModel: ProductViewModel) {
         topBar = {
             TopAppBar(
                 title = { Text("Product List", color = Color.White) },
-                colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = Color(0xFF0A0F25)) // Deep Blue
+                colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = Color(0xFF0A0F25))
             )
         },
 
         floatingActionButton = {
             FloatingActionButton(
                 onClick = { navController.navigate("addProduct") },
-                containerColor = Color(0xFF1976D2), // Bright Blue
+                containerColor = Color(0xFF1976D2),
                 contentColor = Color.White
             ) {
                 Icon(Icons.Filled.Add, contentDescription = "Add Product")
