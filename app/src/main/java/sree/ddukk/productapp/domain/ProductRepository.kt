@@ -16,4 +16,11 @@ class ProductRepository {
             emit(emptyList())
         }
     }
+    suspend fun addProduct(product: Product): Product {
+        return try {
+            api.addProduct(product)
+        } catch (e: Exception) {
+            throw e
+        }
+    }
 }

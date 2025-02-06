@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="sree.ddukk.productapp" />
+                  <option name="mobileSdkAppId" value="1:541007468911:android:57029edd87863796efb09a" />
+                  <option name="projectId" value="productapp-6afc2" />
+                  <option name="projectNumber" value="541007468911" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

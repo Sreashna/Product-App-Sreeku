@@ -2,6 +2,10 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("kotlin-kapt")
+
+
+
 }
 
 android {
@@ -52,8 +56,20 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.play.services.analytics.impl)
+    implementation(libs.firebase.storage)
+    implementation(libs.androidx.room.common)
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.adapters)
     testImplementation(libs.junit)
     implementation (libs.androidx.lifecycle.runtime.ktx.v262)
+
+    implementation(libs.androidx.room.runtime)
+    kapt("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+
+
+
+
     implementation (libs.androidx.lifecycle.viewmodel.compose)
     implementation (libs.retrofit)
     implementation (libs.converter.gson)

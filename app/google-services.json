@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "541007468911",
+    "project_id": "productapp-6afc2",
+    "storage_bucket": "productapp-6afc2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541007468911:android:57029edd87863796efb09a",
+        "android_client_info": {
+          "package_name": "sree.ddukk.productapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhn_mUkPaiPSIiHu-J08l1z_ceSZiO9D4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
